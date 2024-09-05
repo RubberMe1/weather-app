@@ -1,0 +1,114 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add a beautiful background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6D83F2, #BB67E2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the main container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Weather App container */
+.weather-app {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Title styling */
+.weather-app h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input and button styling */
+input {
+    padding: 15px;
+    width: 70%;
+    border: none;
+    border-radius: 50px;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+input:focus {
+    transform: scale(1.05);
+}
+
+button {
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Weather result display */
+#weatherResult {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    display: none;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.4s ease;
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 600px) {
+    .weather-app {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    button {
+        width: 35%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
